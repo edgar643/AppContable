@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true"
+        android:visible="true">
+
+        <item
+            android:id="@+id/botonBalance"
+            android:icon="@drawable/bal"
+            android:title="Balance"
+                       />
+        <item
+            android:id="@+id/botonProductos"
+            android:icon="@drawable/list"
+            android:title="Productos" />
+        <item
+            android:id="@+id/botonUnidades"
+            android:icon="@drawable/ruler"
+            android:title="Unidades" />
+        <item
+            android:id="@+id/botonMonedas"
+            android:icon="@drawable/ic_coins_l"
+            android:title="Monedas" />
+        <item
+            android:id="@+id/botonCategorias"
+            android:icon="@drawable/cat"
+            android:title="Categorias" />
+        <item
+            android:id="@+id/botonCompras"
+            android:icon="@drawable/car2"
+            android:title="Compras"
+
+            />
+        <item
+            android:id="@+id/botonVentas"
+            android:icon="@drawable/ventas"
+            android:title="Ventas" />
+
+
+        <item
+            android:id="@+id/botonRespaldo"
+            android:icon="@drawable/res"
+            android:title="Copia de Seguridad"
+                       />
+        <item
+            android:id="@+id/botonConfigurar"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Configurar" />
+    </group>
+
+    <item android:title="Comunicaciones">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartir" />
+
+        </menu>
+    </item>
+
+</menu>
