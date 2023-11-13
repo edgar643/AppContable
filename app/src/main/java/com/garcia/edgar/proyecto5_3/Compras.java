@@ -199,9 +199,6 @@ consultarDatos();
         });
     }
 
-
-
-
     public void configurarSpinnerProductos() {
         ArrayAdapter adaptador = crearListaSpinner(tfProductos);
         listaProductos.setAdapter(adaptador);
@@ -248,7 +245,6 @@ consultarDatos();
             }
         });
     }
-
 
     private void colocarRangoFechas(int position) {
 
@@ -353,7 +349,7 @@ consultarDatos();
         CSVGenerator generadorCSV =  new CSVGenerator(ruta,nombreCSV,getContext());
         File archivo=null;
         try {
-            archivo =      generadorCSV.saveCSV(traerDatos(),sumaCSV,simboloMonedoFavorita);
+            archivo = generadorCSV.saveCSV(traerDatos(),sumaCSV,simboloMonedoFavorita);
         } catch (IOException e) {
             e.printStackTrace();
             mensaje(e.toString());
