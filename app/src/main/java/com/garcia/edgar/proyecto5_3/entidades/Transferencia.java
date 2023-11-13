@@ -314,11 +314,12 @@ int cant = cursor.getCount();
         return data;
     }
     public String buscarFavorito() {
-        String data=null;
+        String data = null;
         String[] par= {"Si"};
 
             SQLiteDatabase db = conn.getReadableDatabase();
-            String sql = String.format("SELECT * FROM %s WHERE %s = ? ", tabla,Utilidades.campoMonedaFavorita);
+            String sql = String.format("SELECT * FROM %s WHERE %s = ? ",
+                    tabla,Utilidades.campoMonedaFavorita);
            // mensaje(sql);
             Cursor cursor = db.rawQuery(sql,par);
             cursor.moveToFirst();
@@ -345,7 +346,9 @@ int cant = cursor.getCount();
                 String sql ="SELECT "+camposSeguidos+" FROM "+tablaPrincipal+" INNER JOIN "+
                         tablaAuxiliar+" ON "+tablaPrincipal+"."+llavePrimaria1+" = "+tablaAuxiliar+"."
                         +llavePrimaria2+" INNER JOIN "+tablaAuxiliar2+" ON "+tablaPrincipal+"."+llavePrimaria3
-                        +" = "+tablaAuxiliar2+"."+llavePrimaria4+" WHERE "+vectorCampos[1]+" BETWEEN '"+fechaIncio+"' AND '"+fechaFinal+"' AND "+campoIdProductos+" "+operador+" "+idProducto+";";
+                        +" = "+tablaAuxiliar2+"."+llavePrimaria4+" WHERE "+vectorCampos[1]
+                        +" BETWEEN '"+fechaIncio+"' AND '"+fechaFinal+"' " +
+                        "AND "+campoIdProductos+" "+operador+" "+idProducto+";";
                 //System.out.println(sql);
                 Cursor cursor= db.rawQuery(sql,null);
                 cursor.moveToFirst();
